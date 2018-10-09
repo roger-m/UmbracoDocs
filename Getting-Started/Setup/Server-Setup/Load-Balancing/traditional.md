@@ -121,6 +121,16 @@ Example:
 		<server appId="/LM/W3SVC/987/ROOT">server1.mywebsite.com</server>
 	        <server appId="/LM/W3SVC/123/ROOT">server2.mywebsite.com</server>
 	        <server serverName="MyServer3">server3.mywebsite.com</server>
+Distribution
+Add the following to allow distributed calls for updating the cache if you get errors.
+
+<location path="umbraco/webServices">
+<system.web>
+  <authorization>
+    <allow users="*"/>
+  </authorization>
+</system.web>
+</location>
 
 ## Testing
 
